@@ -1,12 +1,12 @@
 package ipca.utility.petpad
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -38,6 +38,8 @@ class LoginActivity : AppCompatActivity() {
     private fun performLogin() {
         val email: EditText = findViewById(R.id.editTextEmail)
         val password: EditText = findViewById(R.id.editTextPassword)
+
+
 
 
 
