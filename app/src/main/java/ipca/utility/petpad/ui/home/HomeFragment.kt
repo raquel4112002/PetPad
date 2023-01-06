@@ -83,7 +83,7 @@ class HomeFragment : Fragment() {
             val rootView = layoutInflater.inflate(R.layout.row_photo, p2, false)
 
             val textViewRowDescription = rootView.findViewById<TextView>(R.id.textViewRowDescription)
-            val imageViewRowPhoto = rootView.findViewById<ImageView>(R.id.imageViewRowPhoto)
+            val imageViewRowPhoto = rootView.findViewById<ImageView>(R.id.imagePerfilPhoto)
 
 
             val storage = Firebase.storage
