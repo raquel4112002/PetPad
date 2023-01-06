@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "349932884271",
+    "project_id": "petpad-78f2e",
+    "storage_bucket": "petpad-78f2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349932884271:android:f91d3619f9d71e0a1ed1da",
+        "android_client_info": {
+          "package_name": "ipca.utility.petpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349932884271-di4rmbl5vg6dj7a5r79s6ocgf9jo31am.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnc8-XXpv2D0U-qy1VMe1ayj2mnkWPHNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349932884271-di4rmbl5vg6dj7a5r79s6ocgf9jo31am.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
