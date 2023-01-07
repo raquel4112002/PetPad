@@ -33,12 +33,12 @@
         tools:layout="@layout/fragment_add_photo" />
     <fragment
         android:id="@+id/ProfileFragment"
-        android:name="ipca.utility.petpad.ui.ProfileFragment"
+        android:name="ipca.utility.petpad.ui.Profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/navigation_Profile"
-        android:name="ipca.utility.petpad.ui.HomeProfileFragment"
+        android:name="ipca.utility.petpad.ui.Profile.HomeProfileFragment"
         android:label="fragment_home_profile"
         tools:layout="@layout/fragment_home_profile" >
         <action

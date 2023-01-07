@@ -1,4 +1,4 @@
-package ipca.utility.petpad.ui
+package ipca.utility.petpad.ui.Profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
