@@ -40,7 +40,7 @@ class ProfileFragment : Fragment() {
             val currentUser = FirebaseAuth.getInstance().currentUser
             db.collection("users")
                 .document(currentUser?.uid!!)
-                .set(hashMapOf("name" to binding.etFirstName.text.toString(),
+                .set(hashMapOf("name" to binding.etFirstName.text.toString(),"last name" to binding.etLastName.text.toString(),
                 "bio" to binding.etBio.text.toString()))
         }
 
