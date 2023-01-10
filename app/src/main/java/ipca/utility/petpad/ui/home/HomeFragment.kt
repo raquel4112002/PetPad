@@ -78,12 +78,13 @@ class HomeFragment : Fragment() {
             return 0
         }
 
-        @SuppressLint("SetTextI18n")
+        @SuppressLint("SetTextI18n", "MissingInflatedId")
         override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
             val rootView = layoutInflater.inflate(R.layout.row_photo, p2, false)
 
             val textViewRowDescription = rootView.findViewById<TextView>(R.id.textViewRowDescription)
             val imageViewRowPhoto = rootView.findViewById<ImageView>(R.id.imagePerfilPhoto)
+
 
 
             val storage = Firebase.storage
@@ -102,6 +103,7 @@ class HomeFragment : Fragment() {
 
 
             textViewRowDescription.text = photos[p0].description
+
 
             return rootView
         }
