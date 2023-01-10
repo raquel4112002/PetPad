@@ -9,11 +9,13 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
@@ -43,16 +45,20 @@ class AddPhotoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val db = Firebase.firestore
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        db.collection("users")
+            .document(currentUser?.uid!!)
+
         dispatchTakePictureIntent()
 
-        val db = Firebase.firestore
         binding.buttonPublish.setOnClickListener {
 
             uploadFile { filename ->
                 filename?.let {
 
 
-                    val photo = Photo( binding.editTextPhotoDescription.text.toString(), it)
+                    val photo = Photo( binding.editTextPhotoDescription.text.toString(), it, currentUser.uid )
 
                     db.collection("photos")
                         .add(photo.toHashMap())
@@ -155,6 +161,16 @@ class AddPhotoFragment : Fragment() {
                 binding.imageViewPhoto.setImageBitmap(this)
             }
             //binding.imageViewPhoto.setImageBitmap(imageBitmap)
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                findNavController().popBackStack()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
         }
     }
 
