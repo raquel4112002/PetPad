@@ -58,18 +58,6 @@
         app:layout_constraintVertical_bias="0.066"
         app:srcCompat="@android:drawable/ic_menu_send" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="34dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagePerfilPhoto"
-        app:srcCompat="@android:drawable/stat_notify_chat" />
-
     <TextView
         android:id="@+id/textViewUserName"
         android:layout_width="131dp"
@@ -80,5 +68,27 @@
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewCoelhinho"
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="4dp"
+        android:background="#F8F8F8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfilPhoto"
+        app:srcCompat="@drawable/ic_outline_cruelty_free_24" />
+
+    <TextView
+        android:id="@+id/textViewNumber"
+        android:layout_width="24dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfilPhoto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

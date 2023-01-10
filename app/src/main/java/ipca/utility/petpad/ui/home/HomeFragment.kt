@@ -105,6 +105,21 @@ class HomeFragment : Fragment() {
             textViewRowDescription.text = photos[p0].description
 
 
+            val textViewNumber = rootView.findViewById<TextView>(R.id.textViewNumber)
+            val imageViewCoelhinho = rootView.findViewById<ImageView>(R.id.imageViewCoelhinho)
+
+            textViewNumber.text = photos[p0].counter.toString()
+            imageViewCoelhinho.setOnClickListener {
+                textViewNumber.text = (textViewNumber.text.toString().toInt()+1).toString()
+                photos[p0].counter=textViewNumber.text.toString().toInt()
+            }
+
+
+
+
+
+
+
             return rootView
         }
 

@@ -58,7 +58,7 @@ class AddPhotoFragment : Fragment() {
                 filename?.let {
 
 
-                    val photo = Photo( binding.editTextPhotoDescription.text.toString(), it, currentUser.uid )
+                    val photo = Photo( binding.editTextPhotoDescription.text.toString(), it, currentUser.uid)
 
                     db.collection("photos")
                         .add(photo.toHashMap())

@@ -7,11 +7,14 @@ class Photo {
     var description : String? = null
     var photo : String? = null
     var user : String?=null
+    var counter : Int? = 0
 
-    constructor(description: String?, photo: String?,user:String? ) {
+
+    constructor(description: String?, photo: String?,user:String?, counter:Int?) {
         this.description = description
         this.photo = photo
         this.user = user
+        this.counter = counter
     }
 
 
@@ -19,7 +22,9 @@ class Photo {
         return hashMapOf(
             "description" to description,
             "photo" to  photo,
-            "User" to user
+            "User" to user,
+            "counter" to counter
+
         )
     }
 
@@ -28,11 +33,21 @@ class Photo {
             return Photo (
                 doc.getString("description"),
                 doc.getString("photo"),
-                doc.getString("user")
+                doc.getString("user"),
+
 
             )
         }
+
+    }
+
+    constructor(description: String?, photo: String?, user: String?){
+
+        this.description = description
+        this.photo = photo
+        this.user = user
+
     }
 
 
-    }
+}
