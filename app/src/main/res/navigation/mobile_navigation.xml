@@ -45,4 +45,9 @@
             android:id="@+id/action_navigation_Profile_to_ProfileFragment"
             app:destination="@id/ProfileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addComentFragment"
+        android:name="ipca.utility.petpad.AddComentFragment"
+        android:label="fragment_add_coment"
+        tools:layout="@layout/fragment_add_coment" />
 </navigation>

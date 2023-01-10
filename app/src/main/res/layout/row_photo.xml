@@ -32,32 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagePerfilPhoto" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="378dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:hint="Comente"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRowDescription"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRowDescription"
-        app:layout_constraintVertical_bias="0.066"
-        app:srcCompat="@android:drawable/ic_menu_send" />
-
     <TextView
         android:id="@+id/textViewUserName"
         android:layout_width="131dp"
@@ -90,5 +64,28 @@
         app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagePerfilPhoto" />
+
+    <ImageView
+        android:id="@+id/imageViewComent"
+        android:layout_width="28dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewRowDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toEndOf="@+id/textViewNumber"
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfilPhoto"
+        app:layout_constraintVertical_bias="0.266"
+        app:srcCompat="@drawable/ic_baseline_chat_24" />
+
+    <TextView
+        android:id="@+id/textViewVerComentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="ver comentarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRowDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

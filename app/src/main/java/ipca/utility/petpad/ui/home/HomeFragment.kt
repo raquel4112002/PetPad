@@ -114,6 +114,14 @@ class HomeFragment : Fragment() {
                 photos[p0].counter=textViewNumber.text.toString().toInt()
             }
 
+            val imageViewComent = rootView.findViewById<ImageView>(R.id.imageViewComent)
+
+            imageViewComent.setOnClickListener {
+                findNavController().navigate(R.id.addComentFragment)
+            }
+
+
+
 
 
 
