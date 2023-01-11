@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_home_to_addPhotoFragment2"
             app:destination="@id/addPhotoFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_comentFragment"
+            app:destination="@id/comentFragment" />
     </fragment>
 
     <fragment
@@ -47,7 +50,12 @@
     </fragment>
     <fragment
         android:id="@+id/addComentFragment"
-        android:name="ipca.utility.petpad.AddComentFragment"
+        android:name="ipca.utility.petpad.ui.Coment.AddComentFragment"
         android:label="fragment_add_coment"
         tools:layout="@layout/fragment_add_coment" />
+    <fragment
+        android:id="@+id/comentFragment"
+        android:name="ipca.utility.petpad.ui.Coment.ComentFragment"
+        android:label="fragment_coment"
+        tools:layout="@layout/fragment_coment" />
 </navigation>

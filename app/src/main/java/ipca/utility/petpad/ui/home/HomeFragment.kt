@@ -120,6 +120,12 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.addComentFragment)
             }
 
+         //   val textViewVerComentarios = rootView.findViewById<ImageView>(R.id.textViewVerComentarios)
+
+          // textViewVerComentarios.setOnClickListener {
+            //   findNavController().navigate(R.id.action_navigation_home_to_comentFragment)
+          //  }
+
 
 
 

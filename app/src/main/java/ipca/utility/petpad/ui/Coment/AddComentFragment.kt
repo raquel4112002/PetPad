@@ -1,4 +1,4 @@
-package ipca.utility.petpad
+package ipca.utility.petpad.ui.Coment
 
 import android.content.Intent
 import android.net.Uri
@@ -20,8 +20,6 @@ import ipca.utility.petpad.databinding.FragmentAddComentBinding
 import ipca.utility.petpad.ui.home.AddPhotoFragment
 import java.io.File
 import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.*
 
 class AddComentFragment: Fragment() {
     private var _binding: FragmentAddComentBinding? = null
@@ -83,7 +81,7 @@ class AddComentFragment: Fragment() {
         val uploadTask = storageRef.child("text/${file.lastPathSegment}").putFile(file)
         uploadTask.addOnProgressListener { task ->
             val progress = (100.0 * task.bytesTransferred) / task.totalByteCount
-            Log.d(AddComentFragment.TAG, "Upload is $progress% done")
+            Log.d(TAG, "Upload is $progress% done")
         }
         uploadTask.addOnCompleteListener { task ->
             if (task.isSuccessful) {
@@ -106,10 +104,9 @@ class AddComentFragment: Fragment() {
     @Throws(IOException::class)
     private fun createImageFile(): File {
         // Create an image file name
-        val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
         val storageDir: File = requireContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)!!
         return File.createTempFile(
-            "TEXT${timeStamp}_", /* prefix */
+            "TEXT_", /* prefix */
             "text", /* suffix */
             storageDir /* directory */
         ).apply {
