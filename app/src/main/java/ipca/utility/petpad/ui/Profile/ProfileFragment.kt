@@ -34,18 +34,23 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.saveBtn.setOnClickListener{
+        binding.saveBtn.setOnClickListener {
 
             val db = Firebase.firestore
             val currentUser = FirebaseAuth.getInstance().currentUser
             db.collection("users")
                 .document(currentUser?.uid!!)
-                .set(hashMapOf("name" to binding.etFirstName.text.toString(),"last name" to binding.etLastName.text.toString(),
-                "bio" to binding.etBio.text.toString()))
-        }
+                .set(
+                    hashMapOf(
+                        "bio" to binding.etBio.text.toString(),
+                        "last name" to binding.etLastName.text.toString(),
+                        "name" to binding.etFirstName.text.toString(),
+                    )
+                )
+            findNavController().popBackStack()
 
-
         }
+    }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -57,9 +62,6 @@ class ProfileFragment : Fragment() {
             else -> return super.onOptionsItemSelected(item)
         }
     }
-
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()
