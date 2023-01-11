@@ -12,14 +12,14 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import ipca.utility.petpad.R
-import ipca.utility.petpad.databinding.FragmentComentBinding
+import ipca.utility.petpad.databinding.FragmentCommentBinding
 
 
 class CommentFragment : Fragment() {
 
-    var Comment = arrayListOf<Comment>()
+    var comment = arrayListOf<Comment>()
     val db = Firebase.firestore
-    private var _binding: FragmentComentBinding? = null
+    private var _binding: FragmentCommentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -27,7 +27,7 @@ class CommentFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentComentBinding.inflate(inflater, container, false)
+        _binding = FragmentCommentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -44,10 +44,10 @@ class CommentFragment : Fragment() {
                     return@addSnapshotListener
                 }
 
-                Comment.clear()
+                comment.clear()
                 for (doc in value!!) {
                     val item = Comment.fromDoc(doc)
-                    Comment.add(item)
+                    comment.add(item)
                 }
 
                 adapter.notifyDataSetChanged()
@@ -64,11 +64,11 @@ class CommentFragment : Fragment() {
 
     inner class PhotoAdapter : BaseAdapter() {
         override fun getCount(): Int {
-            return Comment.size
+            return comment.size
         }
 
         override fun getItem(p0: Int): Any {
-            return Comment[p0]
+            return comment[p0]
         }
 
         override fun getItemId(p0: Int): Long {
@@ -88,7 +88,7 @@ class CommentFragment : Fragment() {
 
 
 
-            textViewComente.text = Comment[p0].description
+            textViewComente.text = comment[p0].description
 
             return rootView
 

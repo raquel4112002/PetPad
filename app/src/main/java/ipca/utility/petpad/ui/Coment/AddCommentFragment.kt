@@ -16,13 +16,13 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import com.google.firebase.storage.ktx.storageMetadata
-import ipca.utility.petpad.databinding.FragmentAddComentBinding
+import ipca.utility.petpad.databinding.FragmentAddCommentBinding
 import ipca.utility.petpad.ui.home.AddPhotoFragment
 import java.io.File
 import java.io.IOException
 
 class AddCommentFragment: Fragment() {
-    private var _binding: FragmentAddComentBinding? = null
+    private var _binding: FragmentAddCommentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class AddCommentFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAddComentBinding.inflate(inflater, container, false)
+        _binding = FragmentAddCommentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
