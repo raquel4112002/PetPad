@@ -21,7 +21,7 @@ import ipca.utility.petpad.ui.home.AddPhotoFragment
 import java.io.File
 import java.io.IOException
 
-class AddComentFragment: Fragment() {
+class AddCommentFragment: Fragment() {
     private var _binding: FragmentAddComentBinding? = null
     private val binding get() = _binding!!
 
@@ -48,7 +48,7 @@ class AddComentFragment: Fragment() {
                 filename?.let {
 
 
-                    val comment = comente(binding.editTextTextPersonName2.text.toString())
+                    val comment = Comment(binding.editTextTextPersonName2.text.toString())
 
                     db.collection("comment")
                         .add(comment.toHashMap())

@@ -2,7 +2,7 @@ package ipca.utility.petpad.ui.Coment
 
 import com.google.firebase.firestore.DocumentSnapshot
 
-class comente {
+class Comment {
 
         var description : String? = null
 
@@ -22,8 +22,8 @@ class comente {
         }
 
         companion object {
-            fun fromDoc (doc: DocumentSnapshot) : comente {
-                return comente (
+            fun fromDoc (doc: DocumentSnapshot) : Comment {
+                return Comment (
                     doc.getString("description"),
 
 

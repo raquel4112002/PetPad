@@ -15,9 +15,9 @@ import ipca.utility.petpad.R
 import ipca.utility.petpad.databinding.FragmentComentBinding
 
 
-class ComentFragment : Fragment() {
+class CommentFragment : Fragment() {
 
-    var Comente = arrayListOf<comente>()
+    var Comment = arrayListOf<Comment>()
     val db = Firebase.firestore
     private var _binding: FragmentComentBinding? = null
     private val binding get() = _binding!!
@@ -44,10 +44,10 @@ class ComentFragment : Fragment() {
                     return@addSnapshotListener
                 }
 
-                Comente.clear()
+                Comment.clear()
                 for (doc in value!!) {
-                    val item = comente.fromDoc(doc)
-                    Comente.add(item)
+                    val item = Comment.fromDoc(doc)
+                    Comment.add(item)
                 }
 
                 adapter.notifyDataSetChanged()
@@ -64,11 +64,11 @@ class ComentFragment : Fragment() {
 
     inner class PhotoAdapter : BaseAdapter() {
         override fun getCount(): Int {
-            return Comente.size
+            return Comment.size
         }
 
         override fun getItem(p0: Int): Any {
-            return Comente[p0]
+            return Comment[p0]
         }
 
         override fun getItemId(p0: Int): Long {
@@ -88,7 +88,7 @@ class ComentFragment : Fragment() {
 
 
 
-            textViewComente.text = Comente[p0].description
+            textViewComente.text = Comment[p0].description
 
             return rootView
 

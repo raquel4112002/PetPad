@@ -50,12 +50,12 @@
     </fragment>
     <fragment
         android:id="@+id/addComentFragment"
-        android:name="ipca.utility.petpad.ui.Coment.AddComentFragment"
+        android:name="ipca.utility.petpad.ui.Coment.AddCommentFragment"
         android:label="fragment_add_coment"
-        tools:layout="@layout/fragment_add_coment" />
+        tools:layout="@layout/fragment_add_comment" />
     <fragment
         android:id="@+id/comentFragment"
-        android:name="ipca.utility.petpad.ui.Coment.ComentFragment"
+        android:name="ipca.utility.petpad.ui.Coment.CommentFragment"
         android:label="fragment_coment"
-        tools:layout="@layout/fragment_coment" />
+        tools:layout="@layout/fragment_comment" />
 </navigation>
